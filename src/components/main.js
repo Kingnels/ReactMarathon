@@ -1,8 +1,10 @@
+import '../../src/index.css';
+
 function Main(){
     return(
-        <div>
+        <div className='main'>
         <h1>Fun Fact about React </h1>
-        <ul>
+        <ul className ="mainlist">
             <li>was first released in 2013</li>
             <li>has well over 100k stars on github</li>
             <li>is maintained by facebook</li>
