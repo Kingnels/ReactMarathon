@@ -49,6 +49,7 @@ function App (){
                         <h2>No Movies Found</h2>
                     </div>
                 }    
+            
     </div>
             );
         }
