@@ -10,10 +10,10 @@ function App (){
     const [Movies, setMovies]= useState([])
     const [searchTerm, setSearchTerm]= useState(''); 
     const searchMovies = async (title) =>{
-        // const response = await fetch('https://www.omdbapi.com/?apikey=f7a8a8eb&s=spiderman');
         const response = await fetch(`${API_URL}&s=${title}`);
         const data = await response.json(); 
-        console.log(data)
+        // const response = await fetch('https://www.omdbapi.com/?apikey=f7a8a8eb&s=spiderman');
+        // console.log(data)
         setMovies(data.Search);
     }  
     useEffect(()=>{ 
@@ -34,7 +34,7 @@ function App (){
                 onClick={()=>{searchMovies(searchTerm)}}
                 />
             </div>         
-                {Movies?.length > 0 
+                {Movies.length > 0 
                     ? (<div className='container'>
                         {
                         Movies.map((movie) => (
